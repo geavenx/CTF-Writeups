@@ -1,7 +1,7 @@
 # Overpass - TryHackMe (pawn)
 
 ## Introduction
-Quite easy CTF, good for begginers.
+Quite easy CTF, good for beginners.
 
 ## Enumeration
 Started with **nmap** scanning ports with the command:
