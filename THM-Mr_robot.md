@@ -49,3 +49,4 @@ $ !sh
 # whoami
 # root
 ```
+Now I gained root privileges, heading to `/root` I could find the third and last flag `key-3-of-3.txt`!
