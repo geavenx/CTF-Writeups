@@ -4,12 +4,16 @@
 Quite easy CTF, good for beginners.
 
 ## Enumeration
-### nmap
-Started with **nmap** scanning ports with the command: <br>`nmap -T5 -sV -p- 10.10.182.114`<br>
+### Nmap
+Started with **nmap** scanning ports with the command: <br>
+`nmap -T5 -sV -p- 10.10.182.114`
 
 With this we discovered that the target got 2 open ports: 22-ssh and 80-HTTP.
 After I tried connecting to the web server by using the IP address of the target as URL.
-Inside the page I found a Download section, there we got some files to download, but after looking at the files I didnt find anything useful, so I decided to run **gobuster** to find any other parent directories with the command:
+Inside the page I found a Download section, there we got some files to download, but after looking at the files I didnt find anything useful.
+
+### Gobuster
+So I decided to run **gobuster** to find any other parent directories with the command:<br>
 `gobuster dir -u http://10.10.193.23/ -w /home/vitor/wordlists/KaliLists-master/dirb/common.txt`
 
 Gobuster found 6 directories (**aboutus, admin, css, downloads, img, index.html**), the admin directory catch my attention, so I went there, and after trying the usual credentials (root:root, admin:admin etc.) with no success, I looked at the 	source code of the page, and found a login.js script in the html.
