@@ -5,6 +5,7 @@ Quite easy CTF, good for beginners.
 
 ## Enumeration
 Started with **nmap** scanning ports with the command:
+
 `nmap -T5 -sV -p- 10.10.182.114`
 
 With this we discovered that the target got 2 open ports: 22-ssh and 80-HTTP.
