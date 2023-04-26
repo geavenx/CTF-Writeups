@@ -14,7 +14,7 @@ Inside the page I found a Download section, there we got some files to download,
 
 ### Gobuster
 So I decided to run **gobuster** to find any other parent directories with the command:<br>
-`gobuster dir -u http://10.10.193.23/ -w /home/vitor/wordlists/KaliLists-master/dirb/common.txt`
+`gobuster dir -u http://10.10.193.23/ -w /path/to/wordlists/dirb/common.txt`
 
 Gobuster found 6 directories (**aboutus, admin, css, downloads, img, index.html**), the admin directory catch my attention, so I went there, and after trying the usual credentials (root:root, admin:admin etc.) with no success, I looked at the 	source code of the page, and found a login.js script in the html.
 
